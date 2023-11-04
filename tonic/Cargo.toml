@@ -25,8 +25,8 @@ version = "0.8.3"
 [features]
 codegen = ["async-trait"]
 gzip = ["flate2"]
-default = ["transport", "codegen", "prost"]
-prost = ["prost1", "prost-derive"]
+default = ["transport", "codegen", "prost1"]
+prost1 = ["prost", "prost-derive"]
 tls = ["rustls-pemfile", "transport", "tokio-rustls"]
 tls-roots = ["tls-roots-common", "rustls-native-certs"]
 tls-roots-common = ["tls"]
@@ -68,7 +68,7 @@ tower-service = "0.3"
 
 # prost
 prost-derive = {git = "https://github.com/TaurusM/prost.git", branch = "main", package = "prost-derive", optional = true}
-prost1 = {git = "https://github.com/TaurusM/prost.git", branch = "main", optional = true}
+prost = {git = "https://github.com/TaurusM/prost.git", branch = "main", optional = true}
 
 # codegen
 async-trait = {version = "0.1.13", optional = true}
